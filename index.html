@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Challenge Encriptador Alura/OracleONE</title>
 </head>
 <body>
     <div class="area-encriptar">
 
-        <textarea  id="texareainput" class="textarea-input" name="textareainput" rows="10" cols ="50">texto a encriptar</textarea>
-        <button type="submit">Encriptar</button>
-        <button type="submit">Desencriptar</button>
+        <textarea  id="textareainput" class="textarea-input" name="textareainput" placeholder="Ingresa el texto a encriptar"></textarea>
+        <button id="btnEncrypt">Encriptar</button>
+        <button id="btnDecrypt">Desencriptar</button>
     </div>
     
     <div class="area-desencriptar">
     
-        <textarea  id="texareaoutput" class="textarea-output" name="textareaoutput" rows="10" cols ="50">mostrando texto encriptado</textarea>
+        <textarea  id="textareaoutput" class="textarea-output" name="textareaoutput" placeholder="Texto encriptado o desencriptado"></textarea>
     
     </div>
-
+    <script src="main.js"></script>
 </body>
 </html>
