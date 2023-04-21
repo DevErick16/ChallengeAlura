@@ -57,8 +57,31 @@ function triggerDecrypt (){
 
 }
 
+
+function copy(){
+    let output = document.getElementById("textareaoutput");
+    text = output.value;
+
+    if (text == ""){
+        alert("No hay nada por copiar")
+    }else{
+        navigator.clipboard.writeText(text).then(()=>{
+            alert("Texto copiado");
+        })
+        .catch((error)=>{
+            alert("No se ha copiado el texto",error);
+        });
+    }
+    }
+    
+
+
+let buttonCopy = document.getElementById("btnCopy")
+buttonCopy.addEventListener("click", copy)
+
+
 let buttonEncrypt = document.getElementById("btnEncrypt");
-buttonEncrypt.onclick = triggerEncrypt;
+buttonEncrypt.addEventListener("click", triggerEncrypt);
 
 let buttonDecrypt = document.getElementById("btnDecrypt");
-buttonDecrypt.onclick = triggerDecrypt;
+buttonDecrypt.addEventListener("click", triggerDecrypt);
