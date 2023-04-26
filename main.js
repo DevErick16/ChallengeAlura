@@ -27,11 +27,11 @@ function decrypt (text) {
 
 function triggerEncrypt (){
     let input = document.getElementById("textareainput");
-    text = input.value;
+    let text = input.value;
     let output = document.getElementById("textareaoutput");
 
     if(text == ""){
-        alert("No hay ningun texto por Encriptar")
+        alert("No hay ningun texto por Encriptar");
     }else{
 
         let resultEncrypt = encrypt(text);
@@ -43,11 +43,11 @@ function triggerEncrypt (){
 
 function triggerDecrypt (){
     let input = document.getElementById("textareainput");
-    text = input.value;
+    let text = input.value;
     let output = document.getElementById("textareaoutput");
 
     if(text == ""){
-        alert("No hay ningun texto por Desencriptar")
+        alert("No hay ningun texto por Desencriptar");
     }else{
 
         let resultDecrypt = decrypt(text);
@@ -65,13 +65,13 @@ function copy(){
     if (text == ""){
         alert("No hay nada por copiar")
     }else{
-        navigator.clipboard.writeText(text).then(()=>{
-            alert("Texto copiado");
-        })
-        .catch((error)=>{
-            alert("No se ha copiado el texto",error);
-        });
-    }
+navigator.clipboard.writeText(text).then(()=>{
+        alert("Texto copiado");
+    })
+    .catch((error)=>{
+        alert("No se ha copiado el texto",error);
+    });
+}
     }
     
 

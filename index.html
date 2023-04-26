@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <!--Font Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Challenge Encriptador Alura/OracleONE</title>
 </head>
+
 <body>
-    <div class="area-encriptar">
-
-        <textarea  id="textareainput" class="textarea-input" name="textareainput" placeholder="Ingresa el texto a encriptar"></textarea>
-        <button id="btnEncrypt">Encriptar</button>
-        <button id="btnDecrypt">Desencriptar</button>
-
-        <button id="btnCopy">Copiar Texto</button>
+    <main class="main_container">
+        <div class="logo_container">
+            <img class"vector" src="assets/Vector.png">
+        </div>
+    <div class="container_encrypt">
+        <textarea id="textareainput" rows="4" cols="50"class="textarea_input" name="textareainput"
+            placeholder="Ingresa el texto aqui"></textarea>
     </div>
+        
     
-    <div class="area-desencriptar">
+        <div class="frame3">
+            <button class="btn_encrypt" id="btnEncrypt">Encriptar</button>
+            <button class="btn_decrypt" "id=" btnDecrypt">Desencriptar</button>
+        </div>
+        
     
-        <textarea  id="textareaoutput" class="textarea-output" name="textareaoutput" placeholder="Texto encriptado o desencriptado"></textarea>
     
-    </div>
+        <div class="frame1">
+            <img class="group" src="assets/Group.png">
+            <p class="advert">Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="container">
+            <div>
+                <img class="muneco" src="assets/Muñeco.png">
+            </div>
+        
+            <div class="frame5">
+                <p class="text_frame_p">
+                    Ningún mensaje fue encontrado
+                </p>
+                <textarea id="textareaoutput" class="textarea_output" name="textareaoutput"
+                    placeholder="Ingresa el texto que desee encriptar o desencriptar"></textarea>
+                    <button id="btnCopy">Copiar Texto</button>
+                </div>
+        </div>
+    </main>
+    
+    
     <script src="main.js"></script>
 </body>
+
 </html>
