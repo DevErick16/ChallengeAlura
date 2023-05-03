@@ -1,3 +1,8 @@
+let buttonCopy = document.getElementById("btnCopy");
+let buttonEncrypt = document.getElementById("btnEncrypt");
+let buttonDecrypt = document.getElementById("btnDecrypt");
+let buttonClean = document.getElementById("btnClean");
+
 const llaves ={
     e:"enter",
     i:"imes",
@@ -26,17 +31,25 @@ function decrypt (text) {
 }
 
 function triggerEncrypt (){
+
+    
     let input = document.getElementById("textareainput");
     let text = input.value;
     let output = document.getElementById("textareaoutput");
 
+
+
+
+    
     if(text == ""){
         alert("No hay ningun texto por Encriptar");
     }else{
 
         let resultEncrypt = encrypt(text);
         output.value = resultEncrypt;
-
+            //ocultar elementos del DOM
+        styles();
+        
     }
 
 }
@@ -53,11 +66,11 @@ function triggerDecrypt (){
         let resultDecrypt = decrypt(text);
         output.value = resultDecrypt;
 
+        styles();
+
     }
 
 }
-
-
 function copy(){
     let output = document.getElementById("textareaoutput");
     text = output.value;
@@ -66,22 +79,49 @@ function copy(){
         alert("No hay nada por copiar")
     }else{
 navigator.clipboard.writeText(text).then(()=>{
-        alert("Texto copiado");
+    Swal.fire({
+        icon: 'success',
+        title: 'Texto copiado en el portapapeles',
+    
+    })
     })
     .catch((error)=>{
         alert("No se ha copiado el texto",error);
     });
 }
     }
-    
+
+    function clean(){
+        let input = document.getElementById("textareainput");
+        let output = document.getElementById("textareaoutput");
+        input.value = "";
+        output.value ="";
+        document.getElementById("areaimg").style.display = 'block';
+        document.getElementById("textinfo").style.display = 'block';
+        document.getElementById("btnCopy").style.display = 'none';
+        document.getElementById("textareaoutput").style.fontSize = "14px";
+
+        Swal.fire({
+            icon: 'success',
+            title: 'hecho!',
+            
+        
+        })
+    }
+
+    function styles(){
+        document.getElementById("areaimg").style.display = 'none';
+        document.getElementById("textinfo").style.display = 'none';
+        document.getElementById("btnCopy").style.display = 'block';
+       // document.getElementById("textareaoutput").style.height = '750px';
+        document.getElementById("textareaoutput").style.fontSize = "24px";
+    }
 
 
-let buttonCopy = document.getElementById("btnCopy")
-buttonCopy.addEventListener("click", copy)
+buttonCopy.addEventListener("click", copy);
 
-
-let buttonEncrypt = document.getElementById("btnEncrypt");
 buttonEncrypt.addEventListener("click", triggerEncrypt);
 
-let buttonDecrypt = document.getElementById("btnDecrypt");
 buttonDecrypt.addEventListener("click", triggerDecrypt);
+
+buttonClean.addEventListener("click", clean);

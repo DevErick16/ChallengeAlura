@@ -12,45 +12,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Challenge Encriptador Alura/OracleONE</title>
 </head>
 
 <body>
-    <main class="main_container">
-        <div class="logo_container">
-            <img class"vector" src="assets/Vector.png">
-        </div>
-    <div class="container_encrypt">
-        <textarea id="textareainput" rows="4" cols="50"class="textarea_input" name="textareainput"
-            placeholder="Ingresa el texto aqui"></textarea>
-    </div>
-        
-    
-        <div class="frame3">
-            <button class="btn_encrypt" id="btnEncrypt">Encriptar</button>
-            <button class="btn_decrypt" "id=" btnDecrypt">Desencriptar</button>
-        </div>
-        
-    
-    
-        <div class="frame1">
-            <img class="group" src="assets/Group.png">
-            <p class="advert">Solo letras minúsculas y sin acentos</p>
-        </div>
-        <div class="container">
-            <div>
+    <main class="container-main">
+
+            <div class="container-left">
+                <div class="logo_container">
+                    <img class="vector" src="assets/Vector.png">
+                </div>
+                    <div class="form">
+                        <div class="container_encrypt">
+                            <textarea id="textareainput" rows="4" cols="50"class="textarea_input" name="textareainput"
+                                placeholder="Ingresa el texto aqui"></textarea>
+                        </div>
+                        <div class="container-buttons">
+                            <div class="warning">
+                                <button class="btn_clean" id="btnClean">Limpiar</button>
+                                <p class="advert"><img class="group" src="assets/Group.png">  Solo letras minúsculas y sin acentos</p>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn_encrypt" id="btnEncrypt">Encriptar</button>
+                                <div class="space"></div>
+                                <button class="btn_decrypt" id="btnDecrypt">Desencriptar</button>
+                                <div class="space"></div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        <div class="container-center"></div>
+            <div class="container-right">
+                <div class="container-decrypt">
+                    <div id="areaimg">
                 <img class="muneco" src="assets/Muñeco.png">
             </div>
-        
-            <div class="frame5">
-                <p class="text_frame_p">
+            <div id="textadvert" class="textadvert">
+                <p id="textinfo" class="text_frame_p">
                     Ningún mensaje fue encontrado
                 </p>
-                <textarea id="textareaoutput" class="textarea_output" name="textareaoutput"
+                <div class="container-result">
+                    <textarea id="textareaoutput" class="textarea_output" name="textareaoutput"
                     placeholder="Ingresa el texto que desee encriptar o desencriptar"></textarea>
-                    <button id="btnCopy">Copiar Texto</button>
+                    <button class="btn_copy" id="btnCopy">Copiar Texto</button>
                 </div>
-        </div>
+                </div>
+                
+                
+                </div>
+            </div>
+        
+    
+    
+    
+        
+        
+        
+        
+            
+                
+    
+    
     </main>
     
     
