@@ -304,14 +304,14 @@ max-width: 100%;
 
 
 footer{
-    padding: 10px 0;
-    background-color: #0A3871;
+    padding: 15px 0;
+    background-color:  #3B4D6F;
     margin-top: 26px;
     font-family: var(--fontFamily);
 
 }
 .copyright{
-    margin-top: 15px;
+    margin-top: 5px;
     text-align: center;
     font-size: 14px;
     color: #fff;
