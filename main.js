@@ -42,7 +42,11 @@ function triggerEncrypt (){
 
     
     if(text == ""){
-        alert("No hay ningun texto por Encriptar");
+        Swal.fire({
+            icon: 'error',
+            title: 'No hay ningun texto por encriptar',
+        
+        })
     }else{
 
         let resultEncrypt = encrypt(text);
@@ -60,7 +64,11 @@ function triggerDecrypt (){
     let output = document.getElementById("textareaoutput");
 
     if(text == ""){
-        alert("No hay ningun texto por Desencriptar");
+        Swal.fire({
+            icon: 'error',
+            title: 'No hay ningun texto por desencriptar',
+        
+        })
     }else{
 
         let resultDecrypt = decrypt(text);
@@ -113,8 +121,7 @@ navigator.clipboard.writeText(text).then(()=>{
         document.getElementById("areaimg").style.display = 'none';
         document.getElementById("textinfo").style.display = 'none';
         document.getElementById("btnCopy").style.display = 'block';
-       // document.getElementById("textareaoutput").style.height = '750px';
-        document.getElementById("textareaoutput").style.fontSize = "24px";
+        
     }
 
 
